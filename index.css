@@ -1,0 +1,70 @@
+h1,
+tr,
+td,
+th {
+	text-align: center;
+}
+table {
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	border: 1px solid #bcbcbc;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+td {
+	width: 20%;
+	border: 1px solid #bcbcbc;
+	border-radius: 15px;
+}
+
+h1 {
+	margin-top: 5%;
+}
+
+.btn {
+	background-color: red;
+}
+
+.btn.hover {
+	background-color: red;
+}
+
+.leeButton {
+	margin-top: 7px;
+	margin-left: 38%;
+	margin-right: auto;
+	display: inline-block;
+	background-color: red;
+	color: white;
+	text-align: center;
+	padding-top: 1%;
+	font-size: 30px;
+	width: 150px;
+	height: 50px;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 15px;
+}
+
+#candidate {
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	height: 40px;
+	padding-top: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	border: 1px solid #bcbcbc;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	text-align: center;
+}
+input {
+	align-self: center;
+	align-items: center;
+	margin-left: 40%;
+}
