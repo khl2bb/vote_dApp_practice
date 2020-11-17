@@ -17,20 +17,19 @@ contract Voting {
         return false;
     }
 
-    bytes32[] public terminalList;
-    function validTerminal(bytes32 terminal) view public returns (bool) {
-        for(uint i=0; i < terminalList.length; i++){
-            if(terminalList[i] == terminal) {
+    string[] public terminalKeyList;
+    function validTerminal(bytes32 terminalKey) view public returns (bool) {
+        for(uint i=0; i < terminalKeyList.length; i++){
+            if(terminalKeyList[i] == terminalKey) {
                 return true;
             } 
         }
         return false;
     }
 
-    function voteForCandidate(bytes32 candidate) public {
-        require(validCandidate(candidate));
-        votesReceived[candidate] += 1;
-        
+    function voteForCandidate(bytes32 candidate, bytes32 terminalKey) public {
+        require(validCandidate(candidate) && validTerminal(terminalKey));
+        votesReceived[candidate] += 1; 
     }
     
     function totalVotesFor(bytes32 candidate) view public returns(uint8) {
