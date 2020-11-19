@@ -4,7 +4,12 @@ let $vote3 = document.getElementById("vote3");
 let $candidate = document.getElementById("candidate");
 
 function clicked(e) {
-	console.log(e.target.style.backgroundColor);
+	// console.log(e.target.style.backgroundColor);
+	
+	$vote1.style.backgroundColor = "white";
+	$vote2.style.backgroundColor = "white";
+	$vote3.style.backgroundColor = "white";
+	
 	e.target.style.backgroundColor = "red";
 	$candidate.innerText = e.target.innerText;
 }
