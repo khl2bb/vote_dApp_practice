@@ -2,10 +2,14 @@ pragma solidity ^0.7.4;
 
 contract Voting {
     
-    bytes32[] public candidateList;
+    
     mapping (bytes32 => uint8) public votesReceived;
-    constructor(bytes32[] memory candidateNames) public {
+
+    bytes32[] public candidateList;
+    bytes32[] public terminalKeyList;
+    constructor(bytes32[] memory candidateNames, bytes32[] memory terminalKeys) public {
         candidateList = candidateNames;
+        terminalKeyList = terminalKeys;
     }
     
     function validCandidate(bytes32 candidate) view public returns (bool) {
@@ -17,7 +21,7 @@ contract Voting {
         return false;
     }
 
-    string[] public terminalKeyList;
+    
     function validTerminal(bytes32 terminalKey) view public returns (bool) {
         for(uint i=0; i < terminalKeyList.length; i++){
             if(terminalKeyList[i] == terminalKey) {
