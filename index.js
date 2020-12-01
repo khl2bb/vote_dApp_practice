@@ -1,7 +1,7 @@
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
 let account;
 web3.eth.getAccounts().then((f) => {
-	account = f[1];
+	account = f[2];
 });
 
 abi = JSON.parse(
